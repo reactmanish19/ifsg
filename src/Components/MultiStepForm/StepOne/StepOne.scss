@@ -1,0 +1,47 @@
+@import "../../../../src/Core/Styles/variables.scss";
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left-section {
+  }
+  &__middle-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .step-heading {
+      margin-bottom: 20px;
+    }
+    .step-indicator {
+      margin-bottom: 40px;
+      color: $color__fill-white;
+    }
+  }
+}
+
+.step-question-container {
+  .step-question {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $color__fill-white;
+    font-size: 30px;
+  }
+  .step-question-instruction {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $color__fill-white;
+  }
+  .step-question-option-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    .step-question-option {
+      border: 1px solid;
+      padding: 10px;
+    }
+  }
+}

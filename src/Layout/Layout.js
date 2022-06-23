@@ -5,10 +5,14 @@ import AppLeftSidebar from "./AppLeftSidebar/AppLeftSidebar"
 const Layout = ({ children }) => {
     return (
         <>
-            <AppHeader />
-            <AppLeftSidebar />
-            {children}
-            <AppFooterSidebar />
+            <div className="multi-step-form-root-container">
+                <div className="multi-step-form-root-container__step-holder">
+                    <AppHeader />
+                    <AppLeftSidebar />
+                    {children}
+                    <AppFooterSidebar />
+                </div>
+            </div>
         </>
     )
 }
