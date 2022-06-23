@@ -1,17 +1,16 @@
+import { Provider } from 'react-redux';
 import "./App.scss"
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { MAIN_CONFIG } from "../src/Config/main"
-import AirPlane from "../src/Components/SVG/AirPlane"
-import MultiStepForm from "../src/Components/MultiStepForm/MultiStepForm"
-
-
-
+import store from './Redux/Store/Store';
+import AllRoutes from './Routes/AllRoutes';
+// import MultiStepForm from "../src/Components/MultiStepForm/MultiStepForm"
 
 const App = () => {
   return (
     <>
-      <MultiStepForm />
+     
+      <Provider store={store}>
+        <AllRoutes />
+        </Provider>
     </>
   );
 }
