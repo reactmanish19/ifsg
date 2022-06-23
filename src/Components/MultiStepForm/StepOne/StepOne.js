@@ -32,13 +32,43 @@ const StepOne = () => {
                 <div className='step-question-instruction'>(Select all that apply)</div>
 
                 <div className='step-question-option-container'>
-                    <div className='step-question-option'>EMPLOYMENT INCOME</div>
-                    <div className='step-question-option'>SAVINGS / DEPOSITS</div>
-                    <div className='step-question-option'>SALE OF SHARES OR OTHER INVESTMENT</div>
-                    <div className='step-question-option'>LOAN</div>
-                    <div className='step-question-option'>COMPANY SALE</div>
-                    <div className='step-question-option'>COMPANY PROFITS / DIVIDENDS</div>
-                    <div className='step-question-option'>INHERITANCE</div>
+                    <ul className="step-question-option-list">
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxOne" value="Order one" checked />
+                            <label for="checkboxOne">EMPLOYMENT INCOME</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxTwo" value="Order Two" />
+                            <label for="checkboxTwo">SAVINGS / DEPOSITS</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxThree" value="Order Two" />
+                            <label for="checkboxThree">SAVINGS / DEPOSITS</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxForth" value="Order Two" />
+                            <label for="checkboxForth">SALE OF SHARES OR OTHER INVESTMENT</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxFifth" value="Order Two" />
+                            <label for="checkboxFifth">LOAN</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxSixth" value="Order Two" />
+                            <label for="checkboxSixth">COMPANY SALE</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxSeventh" value="Order Two" />
+                            <label for="checkboxSeventh">COMPANY PROFITS / DIVIDENDS</label>
+                        </li>
+                        <li className="step-question-option-list__option">
+                            <input type="checkbox" id="checkboxEighth" value="Order Two" />
+                            <label for="checkboxEighth">INHERITANCE</label>
+                        </li>
+                    </ul>
+
+
+
                 </div>
             </div>
 
