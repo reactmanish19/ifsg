@@ -1,6 +1,7 @@
-import AppFooterSidebar from "./AppFooter/AppFooter"
-import AppHeader from "./AppHeader/AppHeader"
-import AppLeftSidebar from "./AppLeftSidebar/AppLeftSidebar"
+import AppFooterSidebar from "./AppFooter/AppFooter";
+import AppHeader from "./AppHeader/AppHeader";
+import AppLeftSidebar from "./AppLeftSidebar/AppLeftSidebar";
+import "../Components/MultiStepForm/MultiStepForm.scss";
 
 const Layout = ({ children }) => {
     return (
@@ -16,4 +17,4 @@ const Layout = ({ children }) => {
         </>
     )
 }
-export default Layout
+export default Layout;
