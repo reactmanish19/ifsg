@@ -1,7 +1,4 @@
+@import "../src/Core/Styles/reset";
+@import "../src/Core/Styles/fonts";
 @import "../src/Core/Styles/variables";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "../src/Core/Styles/typography";

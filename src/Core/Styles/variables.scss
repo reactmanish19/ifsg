@@ -1,9 +1,11 @@
-$headerHeight: 80px;
-$footerHeight: 0;
+$color__fill-very-dark: #0d0c0b;
+$color__fill-pine-tree: #312c22;
+$color__fill-very-dark-grayish-orange: #413f3e;
+$color__fill-very-pale-orange-light: #ffe9c1;
+$color__fill-very-pale-orange-dark: #ceb176;
 
 $color__fill-black: #1a282c;
 $color__fill-white: #ffffff;
-$color__fill-white-alpha-0-2: rgba($color__fill-white, 0.2);
 $color__fill-beige: #e2e1cd;
 $color__fill-pink: #ffa3d1;
 $color__fill-brown: #db7b1c;
@@ -17,8 +19,10 @@ $color__fill-red: #da1e28;
 $color__fill-green: #008067;
 $color__fill-grey: #979797;
 $color__fill-yellow: #ffcd00;
-$color__ui-field-background: rgba(26, 40, 44, 0.03);
 $color__fill-dark-grey: #737373;
 $color__fill-soft-black: #364e55;
 $color__faint-grey: #f0f2f2;
 $color__wild-sand-grey: #e4e2df;
+
+$headerHeight: 80px;
+$footerHeight: 0;
