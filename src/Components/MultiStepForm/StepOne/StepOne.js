@@ -75,7 +75,7 @@ const StepOne = () => {
             </div>
 
             <div className="step-footer">
-                <Button variant="contained">NEXT</Button>
+                <Button className="footer-navigation-button" disabled size="large">NEXT</Button>
             </div>
         </>
     );
