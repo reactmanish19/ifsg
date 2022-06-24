@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-// import Checkbox from "@mui/material/Checkbox";
-import { useHistory} from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -32,7 +30,7 @@ const StepOne = () => {
         }
         setChecked(updatedList);
     }
-    const HandeleNext=()=>{
+    const HandeleNext = () => {
         history.push('/stepsecond')
     }
     return (
@@ -40,7 +38,7 @@ const StepOne = () => {
             <div className="step-header">
                 <div className="step-header__left-section">
                     <IconButton aria-label="Back Arrow" color="success" disabled>
-                        <ArrowBackIosIcon/>
+                        <ArrowBackIosIcon />
                     </IconButton>
                 </div>
                 <div className="step-header__middle-section">
@@ -64,14 +62,14 @@ const StepOne = () => {
                     <ul className="step-question-option-list">
                         {checkboxArray.map((check, ind) => {
                             return (
-                                <li className="step-question-option-list__option">
+                                <li className="step-question-option-list__option" key={ind}>
                                     <input
                                         type="checkbox"
                                         id={ind}
                                         value={check}
                                         onChange={handleCheck}
                                     />
-                                    <label for="checkboxOne">{check}</label>
+                                    <label htmlFor="checkboxOne">{check}</label>
                                 </li>
                             );
                         })}
@@ -80,7 +78,7 @@ const StepOne = () => {
             </div>
 
             <div className="step-footer">
-                <Button className="footer-navigation-button" disabled={checked.length==0?true:false} onClick={HandeleNext} size="large">NEXT</Button>
+                <Button className="footer-navigation-button" disabled={checked.length === 0 ? true : false} onClick={HandeleNext} size="large">NEXT</Button>
             </div>
         </>
     );

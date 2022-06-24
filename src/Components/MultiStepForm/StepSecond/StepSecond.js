@@ -21,11 +21,12 @@ import { useHistory } from "react-router-dom";
 import "./StepSecond.scss";
 
 const StepSecond = () => {
-  const [createFields, setCreateFields] = useState([0]);
 
-  const [values, setValues] = useState({});
   const history = useHistory();
 
+  const [createFields, setCreateFields] = useState([0]);
+
+  const [values, setValues] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("SUBMIT");
@@ -56,11 +57,6 @@ const StepSecond = () => {
    
     }
   };
-  console.log(values);
-  const label = {
-    inputProps: { "aria-label": `I don't hold any digital currency` },
-  };
-  console.log(createFields, "---createFields----");
   return (
     <>
       <div className="step-header">
@@ -92,13 +88,12 @@ const StepSecond = () => {
                 <>
                   <div className="step-question-form-container">
                     <FormControl>
-                      <InputLabel id="Asset_name" color="secondary">
-                        Select
-                      </InputLabel>
+                      <InputLabel id="Asset_name" color="secondary">Specify your digital asset name</InputLabel>
                       <Select
                         variant="outlined"
                         labelId="Asset_name"
-                        label="Select"
+                        label="Specify your digital asset name"
+                        placeholder="Select"
                         name={`Asset_name${val}`}
                         onChange={(e) =>
                           setValues({
@@ -117,7 +112,8 @@ const StepSecond = () => {
                     </FormControl>
 
                     <TextField
-                      label="Custodian name"
+                      label="Specify the custodian name"
+                      placeholder="Custodian name"
                       name={`Custodion_Name${val}`}
                       value={values[`Custodion_Name${val}`]}
                       onChange={(e) =>
