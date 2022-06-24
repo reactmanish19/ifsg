@@ -1,0 +1,11 @@
+@import "../../Core/Styles/variables.scss";
+
+.app-header {
+  margin-bottom: 50px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
