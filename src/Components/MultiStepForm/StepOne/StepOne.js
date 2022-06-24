@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
+import { useHistory} from "react-router-dom";
 
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -9,7 +10,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./StepOne.scss";
 
 const StepOne = () => {
+    const history = useHistory()
     const [checked, setChecked] = useState([]);
+
     const checkboxArray = [
         "EMPLOYMENT INCOME",
         "SAVINGS / DEPOSITS",
@@ -29,7 +32,10 @@ const StepOne = () => {
         }
         setChecked(updatedList);
     }
-    console.log(checked, "CHECKBOX ARRAY")
+    const HandeleNext=()=>{
+        history.push('/stepsecond')
+    }
+    // console.log(checked, "CHECKBOX ARRAY")
     return (
         <>
             <div className="step-header">
@@ -75,7 +81,7 @@ const StepOne = () => {
             </div>
 
             <div className="step-footer">
-                <Button className="footer-navigation-button" disabled size="large">NEXT</Button>
+                <Button className="footer-navigation-button" disabled={checked.length==0?true:false} onClick={HandeleNext} size="large">NEXT</Button>
             </div>
         </>
     );
