@@ -35,13 +35,12 @@ const StepOne = () => {
     const HandeleNext=()=>{
         history.push('/stepsecond')
     }
-    // console.log(checked, "CHECKBOX ARRAY")
     return (
         <>
             <div className="step-header">
                 <div className="step-header__left-section">
-                    <IconButton aria-label="Back Arrow" color="success">
-                        <ArrowBackIosIcon />
+                    <IconButton aria-label="Back Arrow" color="success" disabled>
+                        <ArrowBackIosIcon/>
                     </IconButton>
                 </div>
                 <div className="step-header__middle-section">
@@ -49,7 +48,7 @@ const StepOne = () => {
                     <div className="step-indicator">Step 5/8</div>
                 </div>
                 <div className="step-header__right-section">
-                    <IconButton aria-label="Back Arrow" color="success">
+                    <IconButton aria-label="Back Arrow" color="success" disabled={checked.length==0?true:false} onClick={HandeleNext}>
                         <ArrowForwardIosIcon />
                     </IconButton>
                 </div>
