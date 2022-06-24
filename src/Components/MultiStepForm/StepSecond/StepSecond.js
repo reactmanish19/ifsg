@@ -9,9 +9,10 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import "./StepSecond.scss"
 
 const StepSecond = () => {
-  const [values, setValues] = useState({});
-  const [createFields, setCreateFields] = useState([0]);
 
+    const [createFields, setCreateFields] = useState([0]);
+    
+  const [values, setValues] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("SUBMIT");
