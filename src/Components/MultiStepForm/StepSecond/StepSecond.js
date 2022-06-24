@@ -85,8 +85,7 @@ const StepSecond = () => {
           <div className="step-question-option-container">
             {createFields.map((val, index) => {
               return (
-                <>
-                  <div className="step-question-form-container">
+                  <div className="step-question-form-container" key={index}>
                     <FormControl>
                       <InputLabel id="Asset_name" color="secondary">Specify your digital asset name</InputLabel>
                       <Select
@@ -157,7 +156,6 @@ const StepSecond = () => {
                       {val === 0 ? <AddIcon /> : <RemoveIcon />}
                     </IconButton>
                   </div>
-                </>
               );
             })}
             <div className="i-do-not-hold-any-digital-currency">
