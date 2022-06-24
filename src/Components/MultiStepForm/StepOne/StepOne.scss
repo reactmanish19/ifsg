@@ -6,6 +6,11 @@
   justify-content: space-between;
 
   &__left-section {
+    button {
+      svg {
+        color: $color__fill-white;
+      }
+    }
   }
   &__middle-section {
     display: flex;
@@ -19,6 +24,31 @@
     .step-indicator {
       margin-bottom: 40px;
       color: $color__fill-white;
+    }
+  }
+  &__right-section {
+    button {
+      svg {
+        color: $color__fill-white;
+      }
+    }
+  }
+}
+
+.step-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer-navigation-button {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-width: 250px;
+
+    &:disabled {
+      background: $color__fill-inactive-button-background;
+      color: $color__fill-inactive-button-font-color;
     }
   }
 }
@@ -36,39 +66,55 @@
     color: $color__fill-white;
   }
   .step-question-option-container {
-    display: flex;
-    align-items: center;
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 50px;
     margin-bottom: 50px;
 
     .step-question-option-list {
       list-style: none;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+
       &__option {
         display: block;
+        position: relative;
+
         input[type="checkbox"] {
           position: absolute;
-          // opacity: 0;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
 
           &:checked + label::before {
             content: "\f058";
             transition: transform 0.3s ease-in-out;
             color: $color__fill-very-pale-orange-dark;
+            background: $color__fill-white;
+            border-radius: 100%;
+            height: 20px;
+            width: 20px;
           }
+
           &:checked + label {
             transition: all 0.2s;
+            background: $color__fill-very-dark-grayish-orange;
+            border: 2px solid $color__fill-very-pale-orange-dark;
           }
         }
         label {
-          padding: 10px 20px;
-          cursor: pointer;
-
-          // display: inline-block;
+          padding: 30px 25px;
           background-color: transparent;
           border: 2px solid $color__fill-very-dark-grayish-orange;
           color: $color__fill-very-pale-orange-light;
-          font-size: 18px;
+          font-size: 16px;
+          font-weight: normal;
           border-radius: 2px;
-          white-space: nowrap;
-          margin: 0 0 10px 0;
           -webkit-touch-callout: none;
           -webkit-user-select: none;
           -moz-user-select: none;
@@ -77,6 +123,7 @@
           -webkit-tap-highlight-color: transparent;
           transition: all 0.3s;
           display: block;
+          text-align: center;
 
           &::before {
             display: inline-block;
@@ -88,14 +135,13 @@
             font-weight: 900;
             font-size: 24px;
             padding: 0;
-            margin-right: 15px;
             content: "\f1db";
             color: rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
             position: absolute;
-            right: 50px;
-            margin-top: -5px;
-            // @include transition(0.3s);
+            margin-top: -43px;
+            right: -10px;
+            line-height: 20px;
           }
         }
       }
