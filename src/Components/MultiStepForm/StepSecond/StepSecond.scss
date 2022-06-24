@@ -1,0 +1,47 @@
+@import "../../../Core/Styles/variables.scss";
+
+.step-header {
+}
+.step-question-container {
+  .step-question-option-container {
+    .step-question-form-container {
+      margin-bottom: 15px;
+      .digital-asset-name {
+        min-width: 250px;
+        margin-right: 10px;
+      }
+      .custodian-name {
+        min-width: 250px;
+        max-width: 250px;
+        margin-right: 10px;
+      }
+      .wallet-address {
+        min-width: 250px;
+        margin-right: 10px;
+      }
+      button {
+        &.add-remove-button {
+          height: 56px;
+          width: 56px;
+          border-radius: 0;
+          border: 2px solid $color__fill-very-dark-grayish-orange;
+          svg {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .i-do-not-hold-any-digital-currency {
+    }
+  }
+}
+
+.step-footer {
+  button {
+    background: $color__fill-very-pale-orange-dark;
+    color: $color__fill-white;
+    &:hover {
+      background: rgba($color__fill-very-pale-orange-dark, 0.8);
+    }
+  }
+}
