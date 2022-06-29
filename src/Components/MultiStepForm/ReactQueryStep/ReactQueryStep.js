@@ -26,7 +26,6 @@ const ReactQueryStep = () => {
   return (
     <div>
         {data.results.map((characters) => (
-      
         <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
